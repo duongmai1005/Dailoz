@@ -1,0 +1,2 @@
+# Dailoz
+Task Management app
