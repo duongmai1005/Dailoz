@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13D0D9242A89FBCD008821A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9232A89FBCD008821A0 /* AppDelegate.swift */; };
+		13D0D9262A89FBCD008821A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9252A89FBCD008821A0 /* SceneDelegate.swift */; };
+		13D0D9282A89FBCD008821A0 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9272A89FBCD008821A0 /* TabbarViewController.swift */; };
+		13D0D92D2A89FBCD008821A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D92C2A89FBCD008821A0 /* Assets.xcassets */; };
+		13D0D93E2A8A13C1008821A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D93D2A8A13C1008821A0 /* HomeViewController.swift */; };
+		13D0D9402A8A13CE008821A0 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D93F2A8A13CE008821A0 /* TaskViewController.swift */; };
+		13D0D9422A8A13F7008821A0 /* GraphicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9412A8A13F7008821A0 /* GraphicViewController.swift */; };
+		13D0D9442A8A1402008821A0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9432A8A1402008821A0 /* ProfileViewController.swift */; };
+		13D0D9482A8A1592008821A0 /* CustomTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9472A8A1592008821A0 /* CustomTabbarViewController.swift */; };
+		13D0D94A2A8A16D9008821A0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9492A8A16D9008821A0 /* OnboardingViewController.swift */; };
+		13D0D95C2A8A2C42008821A0 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D94F2A8A2C42008821A0 /* Roboto-Medium.ttf */; };
+		13D0D95D2A8A2C42008821A0 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9502A8A2C42008821A0 /* Roboto-Light.ttf */; };
+		13D0D95E2A8A2C42008821A0 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9512A8A2C42008821A0 /* Roboto-Regular.ttf */; };
+		13D0D95F2A8A2C42008821A0 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9522A8A2C42008821A0 /* Roboto-MediumItalic.ttf */; };
+		13D0D9602A8A2C42008821A0 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9532A8A2C42008821A0 /* Roboto-ThinItalic.ttf */; };
+		13D0D9612A8A2C42008821A0 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9542A8A2C42008821A0 /* Roboto-BoldItalic.ttf */; };
+		13D0D9622A8A2C42008821A0 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9552A8A2C42008821A0 /* Roboto-LightItalic.ttf */; };
+		13D0D9632A8A2C42008821A0 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9562A8A2C42008821A0 /* Roboto-Italic.ttf */; };
+		13D0D9642A8A2C42008821A0 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9572A8A2C42008821A0 /* LICENSE.txt */; };
+		13D0D9652A8A2C42008821A0 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9582A8A2C42008821A0 /* Roboto-BlackItalic.ttf */; };
+		13D0D9662A8A2C42008821A0 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D9592A8A2C42008821A0 /* Roboto-Bold.ttf */; };
+		13D0D9672A8A2C42008821A0 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D95A2A8A2C42008821A0 /* Roboto-Thin.ttf */; };
+		13D0D9682A8A2C42008821A0 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D95B2A8A2C42008821A0 /* Roboto-Black.ttf */; };
+		13D0D96A2A8A3696008821A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9692A8A3696008821A0 /* LoginViewController.swift */; };
+		13D0D96D2A8A4C6E008821A0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D96C2A8A4C6E008821A0 /* CustomTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13D0D9202A89FBCD008821A0 /* Dailoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dailoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13D0D9232A89FBCD008821A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13D0D9252A89FBCD008821A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		13D0D9272A89FBCD008821A0 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		13D0D92C2A89FBCD008821A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13D0D9312A89FBCD008821A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13D0D93D2A8A13C1008821A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13D0D93F2A8A13CE008821A0 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		13D0D9412A8A13F7008821A0 /* GraphicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicViewController.swift; sourceTree = "<group>"; };
+		13D0D9432A8A1402008821A0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		13D0D9472A8A1592008821A0 /* CustomTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbarViewController.swift; sourceTree = "<group>"; };
+		13D0D9492A8A16D9008821A0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		13D0D94F2A8A2C42008821A0 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		13D0D9502A8A2C42008821A0 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		13D0D9512A8A2C42008821A0 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		13D0D9522A8A2C42008821A0 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		13D0D9532A8A2C42008821A0 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		13D0D9542A8A2C42008821A0 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		13D0D9552A8A2C42008821A0 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		13D0D9562A8A2C42008821A0 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		13D0D9572A8A2C42008821A0 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		13D0D9582A8A2C42008821A0 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		13D0D9592A8A2C42008821A0 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		13D0D95A2A8A2C42008821A0 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		13D0D95B2A8A2C42008821A0 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		13D0D9692A8A3696008821A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		13D0D96C2A8A4C6E008821A0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13D0D91D2A89FBCD008821A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13D0D9172A89FBCD008821A0 = {
+			isa = PBXGroup;
+			children = (
+				13D0D9222A89FBCD008821A0 /* Dailoz */,
+				13D0D9212A89FBCD008821A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13D0D9212A89FBCD008821A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D9202A89FBCD008821A0 /* Dailoz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13D0D9222A89FBCD008821A0 /* Dailoz */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D93A2A8A133A008821A0 /* ViewModels */,
+				13D0D9392A8A1334008821A0 /* Controllers */,
+				13D0D9382A8A132D008821A0 /* Views */,
+				13D0D9372A8A1326008821A0 /* Resources */,
+				13D0D9312A89FBCD008821A0 /* Info.plist */,
+			);
+			path = Dailoz;
+			sourceTree = "<group>";
+		};
+		13D0D9372A8A1326008821A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D94B2A8A2639008821A0 /* Fonts */,
+				13D0D9232A89FBCD008821A0 /* AppDelegate.swift */,
+				13D0D9252A89FBCD008821A0 /* SceneDelegate.swift */,
+				13D0D92C2A89FBCD008821A0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13D0D9382A8A132D008821A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13D0D9392A8A1334008821A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D93C2A8A1386008821A0 /* Other */,
+				13D0D93B2A8A1380008821A0 /* Core */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		13D0D93A2A8A133A008821A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		13D0D93B2A8A1380008821A0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D96B2A8A4B35008821A0 /* CustomTextField */,
+				13D0D9462A8A1580008821A0 /* CustomTabbarViewController */,
+				13D0D9272A89FBCD008821A0 /* TabbarViewController.swift */,
+				13D0D93D2A8A13C1008821A0 /* HomeViewController.swift */,
+				13D0D93F2A8A13CE008821A0 /* TaskViewController.swift */,
+				13D0D9412A8A13F7008821A0 /* GraphicViewController.swift */,
+				13D0D9432A8A1402008821A0 /* ProfileViewController.swift */,
+				13D0D9492A8A16D9008821A0 /* OnboardingViewController.swift */,
+				13D0D9692A8A3696008821A0 /* LoginViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		13D0D93C2A8A1386008821A0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		13D0D9462A8A1580008821A0 /* CustomTabbarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D9472A8A1592008821A0 /* CustomTabbarViewController.swift */,
+			);
+			path = CustomTabbarViewController;
+			sourceTree = "<group>";
+		};
+		13D0D94B2A8A2639008821A0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D94E2A8A2C42008821A0 /* Roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		13D0D94E2A8A2C42008821A0 /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D94F2A8A2C42008821A0 /* Roboto-Medium.ttf */,
+				13D0D9502A8A2C42008821A0 /* Roboto-Light.ttf */,
+				13D0D9512A8A2C42008821A0 /* Roboto-Regular.ttf */,
+				13D0D9522A8A2C42008821A0 /* Roboto-MediumItalic.ttf */,
+				13D0D9532A8A2C42008821A0 /* Roboto-ThinItalic.ttf */,
+				13D0D9542A8A2C42008821A0 /* Roboto-BoldItalic.ttf */,
+				13D0D9552A8A2C42008821A0 /* Roboto-LightItalic.ttf */,
+				13D0D9562A8A2C42008821A0 /* Roboto-Italic.ttf */,
+				13D0D9572A8A2C42008821A0 /* LICENSE.txt */,
+				13D0D9582A8A2C42008821A0 /* Roboto-BlackItalic.ttf */,
+				13D0D9592A8A2C42008821A0 /* Roboto-Bold.ttf */,
+				13D0D95A2A8A2C42008821A0 /* Roboto-Thin.ttf */,
+				13D0D95B2A8A2C42008821A0 /* Roboto-Black.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		13D0D96B2A8A4B35008821A0 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				13D0D96C2A8A4C6E008821A0 /* CustomTextField.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13D0D91F2A89FBCD008821A0 /* Dailoz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13D0D9342A89FBCD008821A0 /* Build configuration list for PBXNativeTarget "Dailoz" */;
+			buildPhases = (
+				13D0D91C2A89FBCD008821A0 /* Sources */,
+				13D0D91D2A89FBCD008821A0 /* Frameworks */,
+				13D0D91E2A89FBCD008821A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dailoz;
+			productName = Dailoz;
+			productReference = 13D0D9202A89FBCD008821A0 /* Dailoz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13D0D9182A89FBCD008821A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					13D0D91F2A89FBCD008821A0 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 13D0D91B2A89FBCD008821A0 /* Build configuration list for PBXProject "Dailoz" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13D0D9172A89FBCD008821A0;
+			productRefGroup = 13D0D9212A89FBCD008821A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13D0D91F2A89FBCD008821A0 /* Dailoz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13D0D91E2A89FBCD008821A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D0D9602A8A2C42008821A0 /* Roboto-ThinItalic.ttf in Resources */,
+				13D0D9632A8A2C42008821A0 /* Roboto-Italic.ttf in Resources */,
+				13D0D9662A8A2C42008821A0 /* Roboto-Bold.ttf in Resources */,
+				13D0D95C2A8A2C42008821A0 /* Roboto-Medium.ttf in Resources */,
+				13D0D9622A8A2C42008821A0 /* Roboto-LightItalic.ttf in Resources */,
+				13D0D95F2A8A2C42008821A0 /* Roboto-MediumItalic.ttf in Resources */,
+				13D0D92D2A89FBCD008821A0 /* Assets.xcassets in Resources */,
+				13D0D9652A8A2C42008821A0 /* Roboto-BlackItalic.ttf in Resources */,
+				13D0D95E2A8A2C42008821A0 /* Roboto-Regular.ttf in Resources */,
+				13D0D9612A8A2C42008821A0 /* Roboto-BoldItalic.ttf in Resources */,
+				13D0D9642A8A2C42008821A0 /* LICENSE.txt in Resources */,
+				13D0D9682A8A2C42008821A0 /* Roboto-Black.ttf in Resources */,
+				13D0D9672A8A2C42008821A0 /* Roboto-Thin.ttf in Resources */,
+				13D0D95D2A8A2C42008821A0 /* Roboto-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13D0D91C2A89FBCD008821A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D0D9282A89FBCD008821A0 /* TabbarViewController.swift in Sources */,
+				13D0D96D2A8A4C6E008821A0 /* CustomTextField.swift in Sources */,
+				13D0D9422A8A13F7008821A0 /* GraphicViewController.swift in Sources */,
+				13D0D9482A8A1592008821A0 /* CustomTabbarViewController.swift in Sources */,
+				13D0D9242A89FBCD008821A0 /* AppDelegate.swift in Sources */,
+				13D0D9402A8A13CE008821A0 /* TaskViewController.swift in Sources */,
+				13D0D9442A8A1402008821A0 /* ProfileViewController.swift in Sources */,
+				13D0D9262A89FBCD008821A0 /* SceneDelegate.swift in Sources */,
+				13D0D94A2A8A16D9008821A0 /* OnboardingViewController.swift in Sources */,
+				13D0D96A2A8A3696008821A0 /* LoginViewController.swift in Sources */,
+				13D0D93E2A8A13C1008821A0 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13D0D9322A89FBCD008821A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13D0D9332A89FBCD008821A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13D0D9352A89FBCD008821A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PX9MD86Q39;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dailoz/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtduong.Dailoz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13D0D9362A89FBCD008821A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PX9MD86Q39;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Dailoz/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mtduong.Dailoz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13D0D91B2A89FBCD008821A0 /* Build configuration list for PBXProject "Dailoz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13D0D9322A89FBCD008821A0 /* Debug */,
+				13D0D9332A89FBCD008821A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13D0D9342A89FBCD008821A0 /* Build configuration list for PBXNativeTarget "Dailoz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13D0D9352A89FBCD008821A0 /* Debug */,
+				13D0D9362A89FBCD008821A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13D0D9182A89FBCD008821A0 /* Project object */;
+}
