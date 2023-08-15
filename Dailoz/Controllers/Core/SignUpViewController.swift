@@ -1,62 +1,36 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  Dailoz
 //
-//  Created by mike on 14/08/2023.
+//  Created by mike on 15/08/2023.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
     var titleLbl = UILabel()
     var userNameTF = CustomTextField()
+    var emailTF = CustomTextField()
     var passwordTF = CustomTextField()
-    var forgotPasswordBtn = UIButton()
-    var loginBtn = UIButton()
+    var createAccountBtn = UIButton()
     var horizontalView = UIStackView()
     var googleFBContainerView = UIStackView()
     var googleBtn = UIButton()
     var facebookBtn = UIButton()
-    var signUpBtn = UIButton()
+    var loginBtn = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        passwordTF.tfInput.isSecureTextEntry = true
         handleBtnTap()
         setupView()
     }
     
     private func handleBtnTap() {
-        passwordTF.hideTextIcon.addTarget(self, action: #selector(revealPassword), for: .touchUpInside)
-        forgotPasswordBtn.addTarget(self, action: #selector(forgotPasswordBtnTap), for: .touchUpInside)
         googleBtn.addTarget(self, action: #selector(loginWithGoogleBtnTap), for: .touchUpInside)
         facebookBtn.addTarget(self, action: #selector(loginWithFacebookBtnTap), for: .touchUpInside)
-        signUpBtn.addTarget(self, action: #selector(signUpBtnTap), for: .touchUpInside)
-    }
-    
-    private func setupView() {
-        let subViews = [titleLbl, userNameTF, passwordTF, forgotPasswordBtn, loginBtn, horizontalView, googleFBContainerView]
-        for subView in subViews {
-            // important for autolayout
-            subView.translatesAutoresizingMaskIntoConstraints = false
-            // add view to the superview
-            view.addSubview(subView)
-        }
-        setupTitle()
-        setupUserNameTF()
-        setupPasswordTF()
-        setupForgotBtn()
-        setupLoginBtn()
-        setupHorizontalLine()
-        setupGoogleAndFacebookSection()
-        setupAskSignUpSection()
-    }
-    
-    @objc private func signUpBtnTap() {
-        let signUpVC = SignUpViewController()
-        navigationController?.pushViewController(signUpVC, animated: true)
+        loginBtn.addTarget(self, action: #selector(loginBtnTap), for: .touchUpInside)
     }
     
     @objc private func loginWithGoogleBtnTap() {
@@ -67,16 +41,30 @@ class LoginViewController: UIViewController {
         print("Đăng nhập thành công với Facebook")
     }
     
-    @objc private func forgotPasswordBtnTap() {
-        print("Lay lai mat khau")
+    @objc private func loginBtnTap() {
+        navigationController?.popViewController(animated: true)
     }
     
-    @objc private func revealPassword() {
-        passwordTF.tfInput.isSecureTextEntry.toggle()
+    private func setupView() {
+        let subViews = [titleLbl, userNameTF, emailTF, passwordTF, createAccountBtn, horizontalView, googleFBContainerView]
+        for subView in subViews {
+            // important for autolayout
+            subView.translatesAutoresizingMaskIntoConstraints = false
+            // add view to the superview
+            view.addSubview(subView)
+        }
+        setupTitle()
+        setupUserNameTF()
+        setupEmailTF()
+        setupPasswordTF()
+        setupCreateAccountBtn()
+        setupHorizontalLine()
+        setupGoogleAndFacebookSection()
+        setupAskSignUpSection()
     }
     
     private func setupTitle() {
-        titleLbl.text = "Login"
+        titleLbl.text = "Sign Up"
         titleLbl.font = UIFont(name: "Roboto-Bold", size: 36)
         titleLbl.textColor = UIColor(named: "primary_purple")
         
@@ -87,7 +75,7 @@ class LoginViewController: UIViewController {
     }
     
     private func setupUserNameTF() {
-        userNameTF.setupTextFields(placeholder: "Email ID or Username", image: "Message")
+        userNameTF.setupTextFields(placeholder: "Username", image: "Message")
         userNameTF.hideTextIcon.isHidden = true
         NSLayoutConstraint.activate([
             userNameTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
@@ -96,37 +84,36 @@ class LoginViewController: UIViewController {
         ])
     }
     
+    private func setupEmailTF() {
+        emailTF.setupTextFields(placeholder: "Email ID", image: "Lock")
+        emailTF.hideTextIcon.isHidden = true
+        NSLayoutConstraint.activate([
+            emailTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            emailTF.topAnchor.constraint(equalTo: userNameTF.bottomAnchor, constant: 24),
+            emailTF.containerView.widthAnchor.constraint(equalToConstant: 300)
+        ])
+    }
+    
     private func setupPasswordTF() {
         passwordTF.setupTextFields(placeholder: "Password", image: "Lock")
+        passwordTF.hideTextIcon.isHidden = true
         NSLayoutConstraint.activate([
             passwordTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            passwordTF.topAnchor.constraint(equalTo: userNameTF.bottomAnchor, constant: 24),
+            passwordTF.topAnchor.constraint(equalTo: emailTF.bottomAnchor, constant: 24),
             passwordTF.containerView.widthAnchor.constraint(equalToConstant: 300)
         ])
     }
     
-    private func setupForgotBtn() {
-        forgotPasswordBtn.backgroundColor = .clear
-        forgotPasswordBtn.setTitle("Forgot Password ?", for: .normal)
-        forgotPasswordBtn.setTitleColor(UIColor(named: "primary_purple"), for: .normal)
-        forgotPasswordBtn.titleLabel?.font = UIFont(name: "Roboto-Regular", size: 12)
-        
+    private func setupCreateAccountBtn() {
+        createAccountBtn.setTitle("Create", for: .normal)
+        createAccountBtn.backgroundColor = UIColor(named: "primary_purple")
+        createAccountBtn.layer.cornerRadius = 15
+        createAccountBtn.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 16)
         NSLayoutConstraint.activate([
-            forgotPasswordBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            forgotPasswordBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 4)
-        ])
-    }
-    
-    private func setupLoginBtn() {
-        loginBtn.setTitle("Login", for: .normal)
-        loginBtn.backgroundColor = UIColor(named: "primary_purple")
-        loginBtn.layer.cornerRadius = 15
-        loginBtn.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 16)
-        NSLayoutConstraint.activate([
-            loginBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginBtn.topAnchor.constraint(equalTo: forgotPasswordBtn.bottomAnchor, constant: 56),
-            loginBtn.widthAnchor.constraint(equalToConstant: 300),
-            loginBtn.heightAnchor.constraint(equalToConstant: 52)
+            createAccountBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            createAccountBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 56),
+            createAccountBtn.widthAnchor.constraint(equalToConstant: 300),
+            createAccountBtn.heightAnchor.constraint(equalToConstant: 52)
         ])
     }
     
@@ -154,7 +141,7 @@ class LoginViewController: UIViewController {
         horizontalView.spacing = 10
         
         NSLayoutConstraint.activate([
-            horizontalView.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 54),
+            horizontalView.topAnchor.constraint(equalTo: createAccountBtn.bottomAnchor, constant: 54),
             horizontalView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             horizontalView.widthAnchor.constraint(equalToConstant: 300),
             horizontalView.heightAnchor.constraint(equalToConstant: 18)
@@ -250,21 +237,20 @@ class LoginViewController: UIViewController {
         textLbl.translatesAutoresizingMaskIntoConstraints = false
         
         containerView.addArrangedSubview(textLbl)
-        containerView.addArrangedSubview(signUpBtn)
+        containerView.addArrangedSubview(loginBtn)
         
-        textLbl.text = "Don't have an account? "
+        textLbl.text = "Have any account? "
         textLbl.font = UIFont(name: "Roboto-Regular", size: 14)
         textLbl.textColor = UIColor(named: "purple_2C406E")
         
-        signUpBtn.backgroundColor = .clear
-        signUpBtn.setTitle("Sign Up", for: .normal)
-        signUpBtn.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 14)
-        signUpBtn.setTitleColor(UIColor(named: "purple_2C406E"), for: .normal)
+        loginBtn.backgroundColor = .clear
+        loginBtn.setTitle("Sign In", for: .normal)
+        loginBtn.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 14)
+        loginBtn.setTitleColor(UIColor(named: "purple_2C406E"), for: .normal)
         
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -45)
         ])
     }
-    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1311FCBF2A8B72CD004B2BFC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1311FCBE2A8B72CD004B2BFC /* SignUpViewController.swift */; };
 		13D0D9242A89FBCD008821A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9232A89FBCD008821A0 /* AppDelegate.swift */; };
 		13D0D9262A89FBCD008821A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9252A89FBCD008821A0 /* SceneDelegate.swift */; };
 		13D0D9282A89FBCD008821A0 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9272A89FBCD008821A0 /* TabbarViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1311FCBE2A8B72CD004B2BFC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		13D0D9202A89FBCD008821A0 /* Dailoz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dailoz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D0D9232A89FBCD008821A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13D0D9252A89FBCD008821A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				13D0D9432A8A1402008821A0 /* ProfileViewController.swift */,
 				13D0D9492A8A16D9008821A0 /* OnboardingViewController.swift */,
 				13D0D9692A8A3696008821A0 /* LoginViewController.swift */,
+				1311FCBE2A8B72CD004B2BFC /* SignUpViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				13D0D9482A8A1592008821A0 /* CustomTabbarViewController.swift in Sources */,
 				13D0D9242A89FBCD008821A0 /* AppDelegate.swift in Sources */,
 				13D0D9402A8A13CE008821A0 /* TaskViewController.swift in Sources */,
+				1311FCBF2A8B72CD004B2BFC /* SignUpViewController.swift in Sources */,
 				13D0D9442A8A1402008821A0 /* ProfileViewController.swift in Sources */,
 				13D0D9262A89FBCD008821A0 /* SceneDelegate.swift in Sources */,
 				13D0D94A2A8A16D9008821A0 /* OnboardingViewController.swift in Sources */,

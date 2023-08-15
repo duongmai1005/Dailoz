@@ -24,6 +24,7 @@ class OnboardingViewController: UIViewController {
     
     private func handleBtnTap() {
         loginBtn.addTarget(self, action: #selector(loginBtnTap), for: .touchUpInside)
+        signupBtn.addTarget(self, action: #selector(signUpBtnTap), for: .touchUpInside)
     }
     
     private func setupView() {
@@ -35,6 +36,8 @@ class OnboardingViewController: UIViewController {
             // add view to the superview
             view.addSubview(subView)
         }
+        
+        navigationController?.navigationBar.isHidden = true
         setupImageView()
         setupTitle()
         setupDescription()
@@ -42,10 +45,14 @@ class OnboardingViewController: UIViewController {
         setupSignupBtn()
     }
     
+    @objc private func signUpBtnTap() {
+        let signUpVC = SignUpViewController()
+        navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
     @objc private func loginBtnTap() {
         let loginVC = LoginViewController()
-        loginVC.modalPresentationStyle = .fullScreen
-        present(loginVC, animated: true)
+        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     private func setupImageView() {
