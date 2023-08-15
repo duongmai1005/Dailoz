@@ -22,7 +22,6 @@ class CustomTabbarViewController: UITabBarController, UITabBarControllerDelegate
     }
     
     func setupMiddleButton() {
-        let middleButton = UIButton(frame: CGRect())
     }
     
 }
