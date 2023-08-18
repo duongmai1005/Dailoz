@@ -56,7 +56,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupImageView() {
-        onboardingImageView.customStyleImageView(imageName: "onboarding_ico",
+        onboardingImageView.customStyleImageView(imageName: onboardindImage,
                                                  contentMode: .scaleAspectFit)
         NSLayoutConstraint.activate([
             onboardingImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 42),
@@ -67,7 +67,10 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupTitle() {
-        titleLbl.customStyleLabel(fontName: "Roboto-Regular", fontSize: 32, textColor: "primary_purple", labelContent: "Dailoz.")
+        titleLbl.customStyleLabel(fontName: fontRobotoRegular,
+                                  fontSize: fs_32,
+                                  textColor: purple_5B67CA,
+                                  labelContent: onboardingTitle)
         NSLayoutConstraint.activate([
             titleLbl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             titleLbl.heightAnchor.constraint(equalToConstant: 40)
@@ -75,10 +78,10 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupDescription() {
-        descriptionLbl.customStyleLabel(fontName: "Roboto-Regular",
-                                        fontSize: 14,
-                                        textColor: "purple_2C406E",
-                                        labelContent: "Plan what you will do to be more organized for today, tomorrow and beyond")
+        descriptionLbl.customStyleLabel(fontName: fontRobotoRegular,
+                                        fontSize: fs_14,
+                                        textColor: blue_2C406E,
+                                        labelContent: onboardingDescription)
         descriptionLbl.numberOfLines = 0
         NSLayoutConstraint.activate([
             descriptionLbl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -89,10 +92,10 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupLoginBtn() {
-        loginBtn.customStyleButton(title: "Login",
-                                   fontName: "Roboto-Bold",
-                                   fontsize: 16,
-                                   backgroundColor: UIColor(named: "primary_purple") ?? .white,
+        loginBtn.customStyleButton(title: loginBtnTitle,
+                                   fontName: fontRobotoBold,
+                                   fontsize: fs_16,
+                                   backgroundColor: UIColor(named: purple_5B67CA) ?? .white,
                                    cornerRadius: 15)
         NSLayoutConstraint.activate([
             loginBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -103,10 +106,10 @@ class OnboardingViewController: UIViewController {
     }
     
     private func setupSignupBtn() {
-        signupBtn.customStyleButton(title: "Sign Up",
-                                    color: "primary_purple",
-                                    fontName: "Roboto-Bold",
-                                    fontsize: 14,
+        signupBtn.customStyleButton(title: signUpBtnTitle,
+                                    color: purple_5B67CA,
+                                    fontName: fontRobotoBold,
+                                    fontsize: fs_14,
                                     backgroundColor: .clear)
         NSLayoutConstraint.activate([
             signupBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
