@@ -42,16 +42,17 @@ class OnboardingViewController: UIViewController {
         setupSignupBtn()
     }
     
+    private func setUpNewVC() {
+        let vc = [LoginViewController(), SignUpViewController()]
+        navigationController?.setViewControllers(vc, animated: true)
+    }
+    
     @objc private func signUpBtnTap() {
-        isNewUser = false
-        let signUpVC = SignUpViewController()
-        navigationController?.pushViewController(signUpVC, animated: true)
+        setUpNewVC()
     }
     
     @objc private func loginBtnTap() {
-        isNewUser = false
-        let loginVC = LoginViewController()
-        navigationController?.pushViewController(loginVC, animated: true)
+        setUpNewVC()
     }
     
     private func setupImageView() {

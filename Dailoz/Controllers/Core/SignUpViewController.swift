@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func loginBtnTap() {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     private func setupView() {
