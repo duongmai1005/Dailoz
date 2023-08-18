@@ -42,17 +42,13 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func loginBtnTap() {
-        navigationController?.popViewController(animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func setupView() {
         let subViews = [titleLbl, userNameTF, emailTF, passwordTF, createAccountBtn, horizontalView, googleFBContainerView]
-        for subView in subViews {
-            // important for autolayout
-            subView.translatesAutoresizingMaskIntoConstraints = false
-            // add view to the superview
-            view.addSubview(subView)
-        }
+        view.useAutoLayout(views: subViews)
+        view.addSubViewsToSuperView(views: subViews)
         setupTitle()
         setupUserNameTF()
         setupEmailTF()
@@ -64,9 +60,10 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupTitle() {
-        titleLbl.text = "Sign Up"
-        titleLbl.font = UIFont(name: "Roboto-Bold", size: 36)
-        titleLbl.textColor = UIColor(named: "primary_purple")
+        titleLbl.customStyleLabel(fontName: "Roboto-Bold",
+                                  fontSize: 36,
+                                  textColor: "primary_purple",
+                                  labelContent: "Sign Up")
         
         NSLayoutConstraint.activate([
             titleLbl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
@@ -75,7 +72,8 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupUserNameTF() {
-        userNameTF.setupTextFields(placeholder: "Username", image: "Message")
+        userNameTF.setupTextFields(placeholder: "Username",
+                                   image: "Message")
         userNameTF.hideTextIcon.isHidden = true
         NSLayoutConstraint.activate([
             userNameTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
@@ -85,7 +83,8 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupEmailTF() {
-        emailTF.setupTextFields(placeholder: "Email ID", image: "Lock")
+        emailTF.setupTextFields(placeholder: "Email ID",
+                                image: "Lock")
         emailTF.hideTextIcon.isHidden = true
         NSLayoutConstraint.activate([
             emailTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
@@ -95,7 +94,8 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupPasswordTF() {
-        passwordTF.setupTextFields(placeholder: "Password", image: "Lock")
+        passwordTF.setupTextFields(placeholder: "Password",
+                                   image: "Lock")
         passwordTF.hideTextIcon.isHidden = true
         NSLayoutConstraint.activate([
             passwordTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
@@ -105,10 +105,11 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupCreateAccountBtn() {
-        createAccountBtn.setTitle("Create", for: .normal)
-        createAccountBtn.backgroundColor = UIColor(named: "primary_purple")
-        createAccountBtn.layer.cornerRadius = 15
-        createAccountBtn.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 16)
+        createAccountBtn.customStyleButton(title: "Create",
+                                           fontName: "Roboto-Bold",
+                                           fontsize: 16,
+                                           backgroundColor: UIColor(named: "primary_purple") ?? .white,
+                                           cornerRadius: 15)
         NSLayoutConstraint.activate([
             createAccountBtn.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             createAccountBtn.topAnchor.constraint(equalTo: passwordTF.bottomAnchor, constant: 56),
@@ -130,14 +131,8 @@ class SignUpViewController: UIViewController {
         
         let mainStackView = [leftHorizontalLine, textLabel, rightHorizontalLine]
         let allViews = [leftHorizontalLine, textLabel, rightHorizontalLine, leftLine, rightLine, spacingView1, spacingView2, spacingView3, spacingView4]
-        for view in allViews {
-            view.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
-        for view in mainStackView {
-            horizontalView.addArrangedSubview(view)
-        }
-        
+        view.useAutoLayout(views: allViews)
+        horizontalView.addSubViewRespectively(views: mainStackView)
         horizontalView.spacing = 10
         
         NSLayoutConstraint.activate([
@@ -147,27 +142,25 @@ class SignUpViewController: UIViewController {
             horizontalView.heightAnchor.constraint(equalToConstant: 18)
         ])
         
-        textLabel.text = "or with"
-        textLabel.textAlignment = .center
-        textLabel.font = UIFont(name: "Roboto-Medium", size: 12)
-        textLabel.textColor = UIColor(named: "gray_E3E8F1")
-        
+        textLabel.customStyleLabel(fontName: "Roboto-Medium",
+                                   fontSize: 12,
+                                   textColor: "gray_E3E8F1",
+                                   labelContent: "or with")
         NSLayoutConstraint.activate([
             leftHorizontalLine.widthAnchor.constraint(equalToConstant: 120),
             rightHorizontalLine.widthAnchor.constraint(equalToConstant: 120)
         ])
         
         leftHorizontalLine.axis = .vertical
-        leftHorizontalLine.addArrangedSubview(spacingView1)
-        leftHorizontalLine.addArrangedSubview(leftLine)
-        leftHorizontalLine.addArrangedSubview(spacingView2)
+        let leftHorizontalLineStackView = [spacingView1, leftLine, spacingView2]
+        leftHorizontalLine.addSubViewRespectively(views: leftHorizontalLineStackView)
         leftLine.backgroundColor = UIColor(named: "gray_E3E8F1")
         
         rightHorizontalLine.axis = .vertical
-        rightHorizontalLine.addArrangedSubview(spacingView3)
-        rightHorizontalLine.addArrangedSubview(rightLine)
-        rightHorizontalLine.addArrangedSubview(spacingView4)
+        let rightHorizontalLineStackView = [spacingView3, rightLine, spacingView4]
+        rightHorizontalLine.addSubViewRespectively(views: rightHorizontalLineStackView)
         rightLine.backgroundColor = UIColor(named: "gray_E3E8F1")
+        
         
         NSLayoutConstraint.activate([
             leftLine.heightAnchor.constraint(equalToConstant: 1),
@@ -183,19 +176,16 @@ class SignUpViewController: UIViewController {
         let spacingView = UIView()
         
         let allViews = [googleBtn, facebookBtn, googleImage, facebookImage, spacingView]
-        for view in allViews {
-            view.translatesAutoresizingMaskIntoConstraints = false
-        }
-        googleFBContainerView.addArrangedSubview(googleBtn)
-        googleFBContainerView.addArrangedSubview(spacingView)
-        googleFBContainerView.addArrangedSubview(facebookBtn)
+        view.useAutoLayout(views: allViews)
+        let stackViewItems = [googleBtn, spacingView, facebookBtn]
+        googleFBContainerView.addSubViewRespectively(views: stackViewItems)
         
+        googleImage.customStyleImageView(imageName: "google",
+                                         contentMode: .scaleAspectFit)
         
-        googleImage.image = UIImage(named: "google")
-        googleImage.contentMode = .scaleAspectFit
-        googleBtn.layer.cornerRadius = 20
-        googleBtn.layer.borderWidth = 1
-        googleBtn.layer.borderColor = UIColor(named: "gray_E3E8F1")?.cgColor
+        googleBtn.customStyleButton(cornerRadius: 20,
+                                    borderWidth: 1,
+                                    borderColor: "gray_E3E8F1")
         googleBtn.addSubview(googleImage)
         NSLayoutConstraint.activate([
             googleBtn.topAnchor.constraint(equalTo: googleImage.topAnchor),
@@ -204,14 +194,13 @@ class SignUpViewController: UIViewController {
             googleBtn.trailingAnchor.constraint(equalTo: googleImage.trailingAnchor, constant: 8),
             googleImage.widthAnchor.constraint(equalToConstant: 24)
         ])
+        facebookImage.customStyleImageView(imageName: "Facebook",
+                                           contentMode: .scaleAspectFit)
         
-        facebookImage.image = UIImage(named: "Facebook")
-        facebookImage.contentMode = .scaleAspectFit
-        facebookBtn.layer.cornerRadius = 20
-        facebookBtn.clipsToBounds = true
-        facebookBtn.layer.borderWidth = 1
-        facebookBtn.layer.borderColor = UIColor(named: "gray_E3E8F1")?.cgColor
-        facebookBtn.backgroundColor = .clear
+        facebookBtn.customStyleButton(backgroundColor: .clear,
+                                      cornerRadius: 20,
+                                      borderWidth: 1,
+                                      borderColor: "gray_E3E8F1")
         facebookBtn.addSubview(facebookImage)
         NSLayoutConstraint.activate([
             facebookBtn.topAnchor.constraint(equalTo: facebookImage.topAnchor),
@@ -232,21 +221,22 @@ class SignUpViewController: UIViewController {
     private func setupAskSignUpSection() {
         let containerView = UIStackView()
         let textLbl = UILabel()
+        let allViews = [containerView, textLbl]
+        let stackViewItems = [textLbl, loginBtn]
         view.addSubview(containerView)
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        textLbl.translatesAutoresizingMaskIntoConstraints = false
         
-        containerView.addArrangedSubview(textLbl)
-        containerView.addArrangedSubview(loginBtn)
-        
-        textLbl.text = "Have any account? "
-        textLbl.font = UIFont(name: "Roboto-Regular", size: 14)
-        textLbl.textColor = UIColor(named: "purple_2C406E")
-        
-        loginBtn.backgroundColor = .clear
-        loginBtn.setTitle("Sign In", for: .normal)
-        loginBtn.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 14)
-        loginBtn.setTitleColor(UIColor(named: "purple_2C406E"), for: .normal)
+        view.useAutoLayout(views: allViews)
+        containerView.addSubViewRespectively(views: stackViewItems)
+
+        textLbl.customStyleLabel(fontName: "Roboto-Regular",
+                                 fontSize: 14,
+                                 textColor: "purple_2C406E",
+                                 labelContent: "Have any account? ")
+        loginBtn.customStyleButton(title: "Sign In",
+                                   color: "purple_2C406E",
+                                   fontName: "Roboto-Bold",
+                                   fontsize: 14,
+                                   backgroundColor: .clear)
         
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),

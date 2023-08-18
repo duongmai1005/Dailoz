@@ -33,6 +33,11 @@
 		13D0D9682A8A2C42008821A0 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D0D95B2A8A2C42008821A0 /* Roboto-Black.ttf */; };
 		13D0D96A2A8A3696008821A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D9692A8A3696008821A0 /* LoginViewController.swift */; };
 		13D0D96D2A8A4C6E008821A0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D0D96C2A8A4C6E008821A0 /* CustomTextField.swift */; };
+		13E4CCF92A8F18F0008642ED /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CCF82A8F18F0008642ED /* UILabel.swift */; };
+		13E4CCFB2A8F18FF008642ED /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CCFA2A8F18FF008642ED /* UIButton.swift */; };
+		13E4CCFD2A8F204C008642ED /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CCFC2A8F204C008642ED /* UIImageView.swift */; };
+		13E4CCFF2A8F213C008642ED /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CCFE2A8F213C008642ED /* UIView.swift */; };
+		13E4CD012A8F2642008642ED /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CD002A8F2642008642ED /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +69,11 @@
 		13D0D95B2A8A2C42008821A0 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		13D0D9692A8A3696008821A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		13D0D96C2A8A4C6E008821A0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		13E4CCF82A8F18F0008642ED /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		13E4CCFA2A8F18FF008642ED /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		13E4CCFC2A8F204C008642ED /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		13E4CCFE2A8F213C008642ED /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		13E4CD002A8F2642008642ED /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,7 @@
 		13D0D9222A89FBCD008821A0 /* Dailoz */ = {
 			isa = PBXGroup;
 			children = (
+				13E4CCF72A8F18DF008642ED /* Extension */,
 				13D0D93A2A8A133A008821A0 /* ViewModels */,
 				13D0D9392A8A1334008821A0 /* Controllers */,
 				13D0D9382A8A132D008821A0 /* Views */,
@@ -207,6 +218,18 @@
 			path = CustomTextField;
 			sourceTree = "<group>";
 		};
+		13E4CCF72A8F18DF008642ED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				13E4CCF82A8F18F0008642ED /* UILabel.swift */,
+				13E4CCFA2A8F18FF008642ED /* UIButton.swift */,
+				13E4CCFC2A8F204C008642ED /* UIImageView.swift */,
+				13E4CCFE2A8F213C008642ED /* UIView.swift */,
+				13E4CD002A8F2642008642ED /* UIStackView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,7 +312,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E4CCFF2A8F213C008642ED /* UIView.swift in Sources */,
 				13D0D9282A89FBCD008821A0 /* TabbarViewController.swift in Sources */,
+				13E4CD012A8F2642008642ED /* UIStackView.swift in Sources */,
+				13E4CCFD2A8F204C008642ED /* UIImageView.swift in Sources */,
+				13E4CCF92A8F18F0008642ED /* UILabel.swift in Sources */,
 				13D0D96D2A8A4C6E008821A0 /* CustomTextField.swift in Sources */,
 				13D0D9422A8A13F7008821A0 /* GraphicViewController.swift in Sources */,
 				13D0D9482A8A1592008821A0 /* CustomTabbarViewController.swift in Sources */,
@@ -299,6 +326,7 @@
 				13D0D9442A8A1402008821A0 /* ProfileViewController.swift in Sources */,
 				13D0D9262A89FBCD008821A0 /* SceneDelegate.swift in Sources */,
 				13D0D94A2A8A16D9008821A0 /* OnboardingViewController.swift in Sources */,
+				13E4CCFB2A8F18FF008642ED /* UIButton.swift in Sources */,
 				13D0D96A2A8A3696008821A0 /* LoginViewController.swift in Sources */,
 				13D0D93E2A8A13C1008821A0 /* HomeViewController.swift in Sources */,
 			);

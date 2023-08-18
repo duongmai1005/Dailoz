@@ -19,7 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let vc = OnboardingViewController()
+        var vc: UIViewController!
+        if OnboardingViewController.shared.isNewUser {
+            vc = OnboardingViewController()
+        } else {
+            vc = LoginViewController()
+        }
         
         window.rootViewController = UINavigationController(rootViewController: vc)
         window.makeKeyAndVisible()
