@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     var passwordTF = CustomTextField()
     var forgotPasswordBtn = UIButton()
     var loginBtn = UIButton()
-    var horizontalView = UIStackView()
+    var horizontalView = CustomHorizontalLine()
     var googleFBContainerView = UIStackView()
     var googleBtn = UIButton()
     var facebookBtn = UIButton()
@@ -24,11 +24,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         passwordTF.tfInput.isSecureTextEntry = true
+        userNameTF.tfInput.autocapitalizationType = .none
+        passwordTF.tfInput.autocapitalizationType = .none
         handleBtnTap()
         setupView()
     }
     
     private func handleBtnTap() {
+        loginBtn.addTarget(self, action: #selector(loginBtnTap), for: .touchUpInside)
         passwordTF.hideTextIcon.addTarget(self, action: #selector(revealPassword), for: .touchUpInside)
         forgotPasswordBtn.addTarget(self, action: #selector(forgotPasswordBtnTap), for: .touchUpInside)
         googleBtn.addTarget(self, action: #selector(loginWithGoogleBtnTap), for: .touchUpInside)
@@ -50,9 +53,27 @@ class LoginViewController: UIViewController {
         setupAskSignUpSection()
     }
     
+    private func authentication(username: String, password: String) {
+        let homeVC = HomeViewController()
+        if username != demoUsername || password != password {
+            print("Tên đăng nhập hoặc mật khẩu không chính xác vui lòng nhập lại.")
+        } else {
+            print("Đăng nhập thành công")
+            navigationController?.setViewControllers([homeVC], animated: true)
+        }
+    }
+    
     @objc private func signUpBtnTap() {
         let signUpVC = SignUpViewController()
         navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
+    @objc private func loginBtnTap() {
+        let workItem = DispatchWorkItem { [weak self] in
+            self?.authentication(username: self!.userNameTF.tfInput.text ?? "",
+                                 password: self!.passwordTF.tfInput.text ?? "")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: workItem)
     }
     
     @objc private func loginWithGoogleBtnTap() {
@@ -130,55 +151,11 @@ class LoginViewController: UIViewController {
     }
     
     private func setupHorizontalLine() {
-        let leftHorizontalLine = UIStackView()
-        let rightHorizontalLine = UIStackView()
-        let leftLine = UIView()
-        let rightLine = UIView()
-        let spacingView1 = UIView()
-        let spacingView2 = UIView()
-        let spacingView3 = UIView()
-        let spacingView4 = UIView()
-        let textLabel = UILabel()
-        
-        let mainStackView = [leftHorizontalLine, textLabel, rightHorizontalLine]
-        let allViews = [leftHorizontalLine, textLabel, rightHorizontalLine, leftLine, rightLine, spacingView1, spacingView2, spacingView3, spacingView4]
-        
-        view.useAutoLayout(views: allViews)
-        horizontalView.addSubViewRespectively(views: mainStackView)
-        horizontalView.spacing = 10
-        
         NSLayoutConstraint.activate([
             horizontalView.topAnchor.constraint(equalTo: loginBtn.bottomAnchor, constant: 54),
             horizontalView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             horizontalView.widthAnchor.constraint(equalToConstant: 300),
             horizontalView.heightAnchor.constraint(equalToConstant: 18)
-        ])
-        
-        textLabel.customStyleLabel(fontName: fontRobotoMedium,
-                                   fontSize: fs_12,
-                                   textColor: blue_E3E8F1,
-                                   labelContent: spacerText)
-        
-        NSLayoutConstraint.activate([
-            leftHorizontalLine.widthAnchor.constraint(equalToConstant: 120),
-            rightHorizontalLine.widthAnchor.constraint(equalToConstant: 120)
-        ])
-        
-        leftHorizontalLine.axis = .vertical
-        let leftHorizontalLineStackView = [spacingView1, leftLine, spacingView2]
-        leftHorizontalLine.addSubViewRespectively(views: leftHorizontalLineStackView)
-        leftLine.backgroundColor = UIColor(named: blue_E3E8F1)
-        
-        rightHorizontalLine.axis = .vertical
-        let rightHorizontalLineStackView = [spacingView3, rightLine, spacingView4]
-        rightHorizontalLine.addSubViewRespectively(views: rightHorizontalLineStackView)
-        rightLine.backgroundColor = UIColor(named: blue_E3E8F1)
-        
-        NSLayoutConstraint.activate([
-            leftLine.heightAnchor.constraint(equalToConstant: 1),
-            rightLine.heightAnchor.constraint(equalToConstant: 1),
-            spacingView1.heightAnchor.constraint(equalTo: spacingView2.heightAnchor),
-            spacingView3.heightAnchor.constraint(equalTo: spacingView4.heightAnchor)
         ])
     }
     

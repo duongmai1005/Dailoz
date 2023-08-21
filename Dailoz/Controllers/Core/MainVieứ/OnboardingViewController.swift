@@ -52,7 +52,8 @@ class OnboardingViewController: UIViewController {
     }
     
     @objc private func loginBtnTap() {
-        setUpNewVC()
+        let vc = [SignUpViewController(), LoginViewController()]
+        navigationController?.setViewControllers(vc, animated: true)
     }
     
     private func setupImageView() {

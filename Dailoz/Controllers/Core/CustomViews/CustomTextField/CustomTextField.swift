@@ -28,11 +28,7 @@ class CustomTextField: UIView {
     
     private func setup() {
         let subViews = [containerView, childContainerView, tfIcon, tfInput, underlineView]
-        for subView in subViews {
-            // important for autolayout
-            subView.translatesAutoresizingMaskIntoConstraints = false
-        }
-        
+        useAutoLayout(views: subViews)
         addSubview(containerView)
         containerView.axis = .vertical
         
@@ -68,7 +64,7 @@ class CustomTextField: UIView {
     }
     
     private func setupUnderLineView() {
-        underlineView.backgroundColor = UIColor(named: "gray_E3E8F1")
+        underlineView.backgroundColor = UIColor(named: blue_E3E8F1)
         NSLayoutConstraint.activate([
             underlineView.heightAnchor.constraint(equalToConstant: 1)
         ])

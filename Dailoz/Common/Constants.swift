@@ -52,3 +52,7 @@ let facebookIcon = "Facebook"
 let purple_5B67CA = "purple_5B67CA"
 let blue_2C406E = "blue_2C406E"
 let blue_E3E8F1 = "blue_E3E8F1"
+
+// Demo accounts
+let demoUsername = "duongmai.dev"
+let demoPassword = "duong123"
