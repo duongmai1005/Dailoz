@@ -40,7 +40,6 @@
 		13E4CCFF2A8F213C008642ED /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CCFE2A8F213C008642ED /* UIView+Extension.swift */; };
 		13E4CD012A8F2642008642ED /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CD002A8F2642008642ED /* UIStackView+Extension.swift */; };
 		13E4CD042A8F5DC7008642ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CD032A8F5DC7008642ED /* Constants.swift */; };
-		13E4CD072A8F6E85008642ED /* AuthenticationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4CD062A8F6E85008642ED /* AuthenticationResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +78,6 @@
 		13E4CCFE2A8F213C008642ED /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		13E4CD002A8F2642008642ED /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		13E4CD032A8F5DC7008642ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		13E4CD062A8F6E85008642ED /* AuthenticationResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,18 +264,9 @@
 		13E4CD022A8F5D99008642ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				13E4CD052A8F6E6E008642ED /* Enum */,
 				13E4CD032A8F5DC7008642ED /* Constants.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		13E4CD052A8F6E6E008642ED /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				13E4CD062A8F6E85008642ED /* AuthenticationResults.swift */,
-			);
-			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +355,6 @@
 				13D0D9282A89FBCD008821A0 /* TabbarViewController.swift in Sources */,
 				13E4CD012A8F2642008642ED /* UIStackView+Extension.swift in Sources */,
 				13E4CCFD2A8F204C008642ED /* UIImageView+Extension.swift in Sources */,
-				13E4CD072A8F6E85008642ED /* AuthenticationResults.swift in Sources */,
 				13E4CCF92A8F18F0008642ED /* UILabel+Extension.swift in Sources */,
 				13D0D96D2A8A4C6E008821A0 /* CustomTextField.swift in Sources */,
 				13D0D9422A8A13F7008821A0 /* GraphicViewController.swift in Sources */,
